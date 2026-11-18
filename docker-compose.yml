@@ -1,0 +1,16 @@
+# Deploy individual no Dokploy (serviço Compose).
+# O modelo (~465MB) é baixado no primeiro start para o volume transcription_models.
+services:
+  transcription:
+    build: .
+    image: orbit-crm-transcription
+    container_name: orbit-crm-transcription
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8090:8090"
+    volumes:
+      - transcription_models:/app/models
+
+volumes:
+  transcription_models:

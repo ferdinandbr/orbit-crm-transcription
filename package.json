@@ -1,0 +1,21 @@
+{
+  "name": "crm-orbit-transcription-service",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Serviço de transcrição de áudio (whisper.cpp / modelo small) com fila de processamento para o CRM Orbit",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "transcribe": "tsx src/cli.ts",
+    "setup:binaries": "powershell -ExecutionPolicy Bypass -File scripts/setup-binaries.ps1",
+    "setup:model": "node scripts/download-model.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}

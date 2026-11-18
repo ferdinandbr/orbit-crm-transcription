@@ -1,0 +1,10 @@
+node_modules/
+models/
+bin/
+dist/
+build/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
